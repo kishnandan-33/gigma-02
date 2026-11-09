@@ -1,37 +1,137 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('.navigation');
-const tabletCanvas = window.matchMedia('(min-width: 601px) and (max-width: 1024px)');
+/* ==========================================================
+   MOBILE NAVIGATION
+   ========================================================== */
 
-function fitDesignCanvas() {
-  if (tabletCanvas.matches) {
-    document.body.style.width = '768px';
-    document.body.style.zoom = String(window.innerWidth / 768);
-    document.body.style.margin = '';
-  } else if (window.innerWidth <= 600 || window.innerWidth >= 1025) {
-    document.body.style.width = '390px';
-    document.body.style.zoom = window.innerWidth < 390
-      ? String(window.innerWidth / 390)
-      : '';
-    document.body.style.margin = '0 auto';
-  } else {
-    document.body.style.width = '';
-    document.body.style.zoom = '';
-    document.body.style.margin = '';
+(function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".navigation");
+  const navigationLinks = document.querySelectorAll(".navigation a");
+
+  if (!menuToggle || !navigation) {
+    return;
   }
-}
 
-fitDesignCanvas();
-window.addEventListener('resize', fitDesignCanvas, { passive: true });
+  menuToggle.addEventListener("click", function () {
+    const isOpen = navigation.classList.toggle("is-open");
 
-menuToggle?.addEventListener('click', () => {
-  const isOpen = navigation.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-  menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
-});
-
-navigation?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navigation.classList.remove('open');
-    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
   });
-});
+
+
+  /* Close menu after clicking a navigation link */
+
+  navigationLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      navigation.classList.remove("is-open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+    });
+  });
+
+
+  /* Close menu when clicking outside */
+
+  document.addEventListener("click", function (event) {
+    const clickedInsideNavigation =
+      navigation.contains(event.target);
+
+    const clickedMenuButton =
+      menuToggle.contains(event.target);
+
+    if (
+      !clickedInsideNavigation &&
+      !clickedMenuButton
+    ) {
+      navigation.classList.remove("is-open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+    }
+  });
+
+})();
+
+
+/* ==========================================================
+   ACTIVE NAVIGATION LINK
+   ========================================================== */
+
+(function () {
+  const sections = document.querySelectorAll(
+    "main section[id]"
+  );
+
+  const navigationLinks = document.querySelectorAll(
+    ".navigation a:not(.nav-cta)"
+  );
+
+  if (!sections.length || !navigationLinks.length) {
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        navigationLinks.forEach(function (link) {
+          link.classList.remove("active");
+        });
+
+        const activeLink = document.querySelector(
+          '.navigation a[href="#' +
+          entry.target.id +
+          '"]'
+        );
+
+        if (activeLink) {
+          activeLink.classList.add("active");
+        }
+      });
+    },
+    {
+      threshold: 0.35
+    }
+  );
+
+  sections.forEach(function (section) {
+    observer.observe(section);
+  });
+
+})();
+
+
+/* ==========================================================
+   BACK TO TOP
+   ========================================================== */
+
+(function () {
+  const backToTop = document.querySelector(
+    '.copyright a[href="#top"]'
+  );
+
+  if (!backToTop) {
+    return;
+  }
+
+  backToTop.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+})();

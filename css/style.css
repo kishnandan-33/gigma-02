@@ -239,7 +239,14 @@ a{color:inherit;text-decoration:none}
   .section-heading h2{font-size:16px;line-height:24px;font-weight:400;letter-spacing:0;margin:0;color:var(--navy)}
   .section-heading p{font-size:16px;line-height:24px;margin:16px 0 0;color:var(--ink)}
   .destination-grid{width:100%;height:1996px;flex:0 0 1996px;grid-template-columns:minmax(0,1fr);grid-template-rows:475px 475px 475px 499px;gap:24px}
-  .destination-card{height:auto;min-width:0;border-radius:12px;display:flex;flex-direction:column;box-shadow:none}
+  .destination-card{
+      height:auto;
+      min-width:0;
+      border-radius:12px;
+      display:flex;
+      flex-direction:column;
+      box-shadow:none
+    }
   .card-image{height:267px;flex:0 0 267px}
   .card-image img{object-fit:fill}
   .price{opacity:0;pointer-events:none}

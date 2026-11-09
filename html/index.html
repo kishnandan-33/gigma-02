@@ -1,82 +1,248 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f8f9fa" />
-    <meta name="description" content="Find your next adventure with Wanderlust Travel." />
-    <title>Wanderlust — Find Your Next Adventure</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
-    <header class="site-header" id="top">
-      <a class="brand" href="#top">Wanderlust</a>
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="navigation" aria-label="Main navigation">
-        <a class="active" href="#top">Home</a>
-        <a href="#about">About</a>
-        <a href="#destinations">Destinations</a>
-        <a class="nav-cta" href="#destinations">Book Now</a>
-      </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wonderlust</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="#" class="logo">Wonderlust</a>
+
+            <nav class="navigation">
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#about">About</a>
+                <a href="#booking" class="book-button">Book Now</a>
+            </nav>
+
+            <button class="menu-button" aria-label="Open menu">
+                ☰
+            </button>
+
+        </div>
     </header>
 
+
     <main>
-      <section class="hero" aria-label="Welcome to Wanderlust Travel">
-        <img class="hero-art hero-art--tablet" src="assets/hero-reference.png" alt="" aria-hidden="true" />
-        <img class="hero-art hero-art--reference" src="assets/mobile-reference-page.png" alt="" aria-hidden="true" />
-        <div class="visually-hidden">
-          <h1>Welcome to Dream Travel</h1>
-          <p>Find your next adventure here. Explore pristine beaches, towering mountains, and vibrant cities with our curated travel experiences.</p>
-        </div>
-        <a class="hero-hotspot" href="#destinations" aria-label="Book now and view featured destinations"></a>
-      </section>
 
-      <section class="destinations section" id="destinations">
-        <div class="section-heading">
-          <h2>Featured Destinations</h2>
-          <p>Discover our most popular travel spots curated just for you.</p>
-        </div>
-        <div class="destination-grid">
-          <article class="destination-card">
-            <div class="card-image"><img src="assets/maldives.png" alt="Turquoise water and overwater villas in the Maldives" /><span class="price">From $1,299</span></div>
-            <div class="card-copy"><h3>Maldives</h3><p>Experience ultimate luxury in crystal clear waters and pristine white sand beaches.</p><a href="#about" class="learn-more">Learn More</a></div>
-          </article>
-          <article class="destination-card">
-            <div class="card-image"><img src="assets/swiss-alps.png" alt="Snowy Swiss mountain peaks and a chalet" /><span class="price">From $899</span></div>
-            <div class="card-copy"><h3>Swiss Alps</h3><p>Hit the slopes or relax in a cozy chalet with breathtaking mountain views.</p><a href="#about" class="learn-more">Learn More</a></div>
-          </article>
-          <article class="destination-card">
-            <div class="card-image"><img src="assets/safari.png" alt="Elephants crossing the savanna at sunset" /><span class="price">From $2,499</span></div>
-            <div class="card-copy"><h3>Safari Adventure</h3><p>Witness extraordinary wildlife in their natural habitat across vast plains.</p><a href="#about" class="learn-more">Learn More</a></div>
-          </article>
-          <article class="destination-card">
-            <div class="card-image"><img src="assets/tokyo.png" alt="Illuminated Tokyo crossing at night" /><span class="price">From $1,599</span></div>
-            <div class="card-copy"><h3>Tokyo City</h3><p>Immerse yourself in a vibrant metropolis blending deep tradition with modern tech.</p><a href="#about" class="learn-more">Learn More</a></div>
-          </article>
-        </div>
-      </section>
+        <!-- Hero -->
+        <section class="hero-section" id="home">
 
-      <section class="about section" id="about">
-        <h2>About Us</h2>
-        <div class="about-card">
-          <p>We are a passionate team of travelers dedicated to helping you find the perfect getaway. From sunny beaches to snowy mountains, we handle all the details so you can enjoy the journey. Our mission is to make exploration effortless, providing curated itineraries and seamless booking experiences that let you focus on making memories.</p>
-        </div>
-      </section>
+            <div class="hero-content">
+
+                <h1>
+                    WELCOME TO DREAM<br>
+                    TRAVEL
+                </h1>
+
+                <p>
+                    Discover breathtaking destinations and create
+                    unforgettable memories around the world.
+                </p>
+
+                <a href="#destinations" class="hero-button">
+                    Explore Now
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Destinations -->
+        <section class="destinations-section" id="destinations">
+
+            <div class="section-heading">
+                <h2>Featured Destinations</h2>
+
+                <p>
+                    Explore our handpicked destinations and start
+                    planning your next adventure.
+                </p>
+            </div>
+
+            <div class="destination-grid">
+
+                <!-- Card 1 -->
+                <article class="destination-card">
+
+                    <div class="destination-image">
+                        <img src="../images/maldives.jpg" alt="Maldives">
+
+                        <span class="destination-price">
+                            $1,299
+                        </span>
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>Maldives</h3>
+
+                        <p>
+                            Experience ultimate luxury in crystal clear
+                            waters and pristine white sand beaches.
+                        </p>
+
+                        <a href="#" class="card-button">
+                            Explore
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 2 -->
+                <article class="destination-card">
+
+                    <div class="destination-image">
+                        <img src="../images/swiss-alps.jpg" alt="Swiss Alps">
+
+                        <span class="destination-price">
+                            $899
+                        </span>
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>Swiss Alps</h3>
+
+                        <p>
+                            Hit the slopes or relax in a cozy chalet
+                            with breathtaking mountain views.
+                        </p>
+
+                        <a href="#" class="card-button">
+                            Explore
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 3 -->
+                <article class="destination-card">
+
+                    <div class="destination-image">
+                        <img src="../images/safari.jpg" alt="Safari Adventure">
+
+                        <span class="destination-price">
+                            $2,499
+                        </span>
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>Safari Adventure</h3>
+
+                        <p>
+                            Witness extraordinary wildlife in their
+                            natural habitat across vast plains.
+                        </p>
+
+                        <a href="#" class="card-button">
+                            Explore
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 4 -->
+                <article class="destination-card">
+
+                    <div class="destination-image">
+                        <img src="../images/tokyo.jpg" alt="Tokyo City">
+
+                        <span class="destination-price">
+                            $1,599
+                        </span>
+                    </div>
+
+                    <div class="destination-content">
+
+                        <h3>Tokyo City</h3>
+
+                        <p>
+                            Immerse yourself in a vibrant metropolis
+                            blending deep tradition with modern tech.
+                        </p>
+
+                        <a href="#" class="card-button">
+                            Explore
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section class="about-section" id="about">
+
+            <div class="section-heading">
+                <h2>About Us</h2>
+            </div>
+
+            <div class="about-card">
+
+                <p>
+                    We believe travel is more than visiting new places.
+                    It is about experiencing different cultures,
+                    discovering yourself, and creating memories that
+                    last a lifetime.
+                </p>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer class="site-footer">
-      <a class="footer-brand" href="#top">Wanderlust</a>
-      <nav class="footer-links" aria-label="Footer links">
-        <a href="#privacy">Privacy Policy</a><a href="#terms">Terms of Service</a>
-        <div><a href="mailto:hello@wanderlust.travel">Contact Us</a><a href="#faq">FAQ</a></div>
-      </nav>
-      <div class="copyright"><p>© 2024 Wanderlust Travel<br class="tablet-break" />Agency. All rights reserved.</p><a href="#top">Back to Top ↑</a></div>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="booking">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>Wonderlust</h2>
+            </div>
+
+            <nav class="footer-navigation">
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#about">About</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <div class="footer-info">
+                <p>© 2026 Wonderlust. All rights reserved.</p>
+                <a href="#">Privacy Policy →</a>
+            </div>
+
+        </div>
+
     </footer>
+
+
     <script src="../js/script.js"></script>
-  </body>
+
+</body>
 </html>

@@ -1,671 +1,745 @@
-/* =========================================================
-   Reset
-   ========================================================= */
+/* ==========================================================
+   RESET
+   ========================================================== */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Plus Jakarta Sans", Arial, sans-serif;
-    background: #f8f9fa;
-    color: #222;
-    line-height: 1.5;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: #f8f9fa;
+  color: #1f2933;
+  overflow-x: hidden;
 }
 
 img {
-    width: 100%;
-    display: block;
+  display: block;
+  max-width: 100%;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  color: inherit;
+  text-decoration: none;
 }
 
 
-/* =========================================================
-   Header
-   ========================================================= */
+/* ==========================================================
+   COMMON
+   ========================================================== */
 
-.site-header {
-    width: 100%;
-    height: 80px;
-    background: #ffffff;
-    position: relative;
-    z-index: 100;
+.section {
+  width: 100%;
 }
-
-.header-container {
-    width: min(100% - 160px, 1440px);
-    height: 100%;
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 800;
-    color: #0077b6;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.navigation a {
-    font-size: 16px;
-    font-weight: 500;
-    color: #222;
-    transition: 0.3s ease;
-}
-
-.navigation a:hover {
-    color: #0077b6;
-}
-
-.navigation .book-button {
-    padding: 8px 24px;
-    background: #0077b6;
-    color: #ffffff;
-    border-radius: 6px;
-}
-
-.navigation .book-button:hover {
-    background: #005f8f;
-    color: #ffffff;
-}
-
-.menu-button {
-    display: none;
-    border: 0;
-    background: transparent;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-
-/* =========================================================
-   Hero
-   ========================================================= */
-
-.hero-section {
-    min-height: 1536px;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.25)
-        ),
-        url("../images/hero.jpg");
-
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-content {
-    width: min(608px, calc(100% - 48px));
-    text-align: center;
-    color: #ffffff;
-}
-
-.hero-content h1 {
-    font-size: clamp(42px, 5vw, 56px);
-    line-height: 1.1;
-    font-weight: 800;
-    margin-bottom: 24px;
-}
-
-.hero-content p {
-    max-width: 560px;
-    margin: 0 auto 32px;
-
-    font-size: 18px;
-    line-height: 1.6;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-}
-
-.hero-button {
-    min-width: 185px;
-    height: 60px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-
-    padding: 0 32px;
-
-    background: #0077b6;
-    color: #ffffff;
-
-    border-radius: 6px;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
-    transition: 0.3s ease;
-}
-
-.hero-button:hover {
-    background: #005f8f;
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   Common Section Heading
-   ========================================================= */
 
 .section-heading {
-    width: min(608px, 100%);
-    margin: 0 auto 64px;
-    text-align: center;
+  text-align: center;
 }
 
-.section-heading h2 {
-    font-size: 36px;
-    line-height: 1.3;
-    font-weight: 700;
-    color: #222;
+.section-heading h2,
+.about h2 {
+  color: #0077b6;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
 .section-heading p {
-    margin-top: 16px;
-    font-size: 16px;
-    color: #555;
+  margin-top: 16px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 
-/* =========================================================
-   Destinations
-   ========================================================= */
+/* ==========================================================
+   HEADER
+   ========================================================== */
 
-.destinations-section {
-    width: 100%;
-    padding: 95px 80px 96px;
+.site-header {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 80px;
+
+  background: #ffffff;
+
+  position: relative;
+  z-index: 1000;
+}
+
+.brand {
+  color: #0077b6;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.navigation a {
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  color: #0077b6;
+}
+
+.navigation .nav-cta {
+  padding: 13px 25px;
+
+  background: #0077b6;
+  color: #ffffff;
+
+  border-radius: 7px;
+}
+
+.navigation .nav-cta:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.menu-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #222;
+
+  transition: 0.25s ease;
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.hero {
+  min-height: 1536px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.42),
+      rgba(0, 0, 0, 0.42)
+    ),
+    url("../imges/bg-img.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  width: min(850px, calc(100% - 48px));
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero-content p {
+  max-width: 680px;
+
+  margin-top: 28px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.hero-button {
+  margin-top: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 145px;
+  min-height: 50px;
+
+  padding: 0 28px;
+
+  background: #0077b6;
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.hero-button:hover {
+  background: #005f91;
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   DESTINATIONS
+   ========================================================== */
+
+.destinations {
+  padding: 95px 80px 110px;
+  background: #f8f9fa;
 }
 
 .destination-grid {
-    width: min(100%, 1280px);
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
 
-    display: grid;
+  margin: 55px auto 0;
 
-    grid-template-columns: repeat(4, 1fr);
+  display: grid;
 
-    gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
 }
 
 .destination-card {
-    overflow: hidden;
+  overflow: hidden;
 
-    background: #ffffff;
+  background: #ffffff;
 
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
+  border-radius: 12px;
 
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
 
-    transition: 0.3s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .destination-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.12);
 }
 
-.destination-image {
-    height: 218px;
-    position: relative;
-    overflow: hidden;
+.card-image {
+  width: 100%;
+  height: 217px;
+
+  position: relative;
+
+  overflow: hidden;
 }
 
-.destination-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
 }
 
-.destination-price {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-
-    padding: 4px 12px;
-
-    background: rgba(0, 0, 0, 0.65);
-    color: #ffffff;
-
-    border-radius: 4px;
-
-    font-size: 14px;
-    font-weight: 600;
+.destination-card:hover .card-image img {
+  transform: scale(1.04);
 }
 
-.destination-content {
-    min-height: 230px;
-    padding: 24px;
+.price {
+  position: absolute;
 
-    display: flex;
-    flex-direction: column;
+  right: 14px;
+  bottom: 14px;
+
+  padding: 8px 12px;
+
+  background: #e9c46a;
+  color: #222;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  font-weight: 700;
 }
 
-.destination-content h3 {
-    font-size: 26px;
-    line-height: 1.5;
-    font-weight: 700;
-    color: #0077b6;
+.card-copy {
+  padding: 24px;
 }
 
-.destination-content p {
-    margin-top: 24px;
+.card-copy h3 {
+  color: #0077b6;
 
-    font-size: 16px;
-    line-height: 1.5;
-
-    color: #555;
+  font-size: 21px;
+  font-weight: 800;
 }
 
-.card-button {
-    margin-top: auto;
+.card-copy p {
+  min-height: 78px;
 
-    width: 100%;
-    height: 38px;
+  margin-top: 12px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  color: #555;
 
-    border: 1px solid #0077b6;
-    border-radius: 5px;
-
-    color: #0077b6;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    transition: 0.3s ease;
+  font-size: 14px;
+  line-height: 1.65;
 }
 
-.card-button:hover {
-    background: #0077b6;
-    color: #ffffff;
+.learn-more {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  color: #0077b6;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: color 0.2s ease;
+}
+
+.learn-more:hover {
+  color: #005f91;
 }
 
 
-/* =========================================================
-   About
-   ========================================================= */
+/* ==========================================================
+   ABOUT
+   ========================================================== */
 
-.about-section {
-    width: 100%;
-    padding: 95px 80px 96px;
+.about {
+  position: relative;
+
+  padding: 95px 80px 110px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 45px;
 }
 
 .about-card {
-    width: min(100%, 1280px);
-    min-height: 274px;
+  width: min(1100px, 100%);
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    position: relative;
-    overflow: hidden;
+  padding: 55px 70px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: #ffffff;
 
-    padding: 49px;
+  border: 1px solid #e3e7eb;
 
-    background: #ffffff;
+  border-radius: 14px;
 
-    border: 1px solid #dddddd;
-    border-radius: 12px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.about-card::after {
-    content: "";
-
-    position: absolute;
-
-    width: 256px;
-    height: 256px;
-
-    top: -80px;
-    right: -1px;
-
-    background: #eaf6fb;
-
-    border-radius: 50%;
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.06);
 }
 
 .about-card p {
-    position: relative;
-    z-index: 2;
+  color: #555;
 
-    max-width: 505px;
-
-    text-align: center;
-
-    font-size: 18px;
-    line-height: 1.7;
-
-    color: #555;
+  font-size: 16px;
+  line-height: 1.9;
 }
 
 
-/* =========================================================
-   Footer
-   ========================================================= */
+/* ==========================================================
+   FOOTER
+   ========================================================== */
 
 .site-footer {
-    min-height: 217px;
+  min-height: 217px;
 
-    background: #ffffff;
+  padding: 45px 80px;
 
-    border-top: 1px solid #e5e5e5;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+
+  gap: 40px;
+
+  background: #0077b6;
+
+  color: #ffffff;
 }
 
-.footer-container {
-    width: min(100% - 160px, 1440px);
-    min-height: 217px;
-
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 1fr 1.4fr 1fr;
-
-    align-items: center;
-    gap: 40px;
+.footer-brand {
+  font-size: 27px;
+  font-weight: 800;
 }
 
-.footer-brand h2 {
-    font-size: 24px;
-    font-weight: 800;
-    color: #0077b6;
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+
+  font-size: 13px;
 }
 
-.footer-navigation {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: center;
-    gap: 24px 48px;
+.footer-links div {
+  display: flex;
+  gap: 25px;
 }
 
-.footer-navigation a {
-    font-size: 16px;
-    color: #444;
-
-    transition: 0.3s ease;
+.footer-links a,
+.copyright a {
+  transition: opacity 0.2s ease;
 }
 
-.footer-navigation a:hover {
-    color: #0077b6;
+.footer-links a:hover,
+.copyright a:hover {
+  opacity: 0.7;
 }
 
-.footer-info {
-    text-align: right;
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 12px;
+
+  text-align: right;
+
+  font-size: 12px;
+  line-height: 1.5;
 }
 
-.footer-info p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #666;
+.copyright a {
+  font-size: 13px;
+  font-weight: 600;
 }
 
-.footer-info a {
-    display: inline-flex;
-    margin-top: 8px;
-
-    font-size: 14px;
-    color: #0077b6;
+.tablet-break {
+  display: none;
 }
 
 
-/* =========================================================
-   Tablet
-   ========================================================= */
+/* ==========================================================
+   TABLET
+   768px - 1100px
+   ========================================================== */
 
 @media (max-width: 1100px) {
 
-    .header-container {
-        width: calc(100% - 80px);
-    }
+  .site-header {
+    padding: 0 40px;
+  }
 
-    .navigation {
-        gap: 24px;
-    }
+  .navigation {
+    gap: 24px;
+  }
 
-    .destination-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .hero {
+    min-height: 1536px;
+  }
 
-    .footer-container {
-        width: calc(100% - 80px);
-    }
+  .hero-content h1 {
+    font-size: 50px;
+  }
+
+  .destinations {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .site-footer {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-links {
+    justify-content: flex-end;
+  }
+
+  .copyright {
+    grid-column: 1 / -1;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .tablet-break {
+    display: inline;
+  }
 }
 
 
-/* =========================================================
-   Mobile
-   ========================================================= */
+/* ==========================================================
+   MOBILE
+   ========================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
-    /* Header */
+  .site-header {
+    height: 72px;
 
-    .site-header {
-        height: 80px;
-    }
+    padding: 0 20px;
+  }
 
-    .header-container {
-        width: calc(100% - 32px);
-    }
+  .brand {
+    font-size: 24px;
+  }
 
-    .navigation {
-        display: none;
+  .menu-toggle {
+    display: flex;
+  }
 
-        position: absolute;
+  .navigation {
+    position: absolute;
 
-        top: 80px;
-        left: 0;
+    top: 72px;
+    left: 0;
 
-        width: 100%;
+    width: 100%;
 
-        padding: 24px 16px;
+    padding: 20px;
 
-        flex-direction: column;
-        align-items: stretch;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
 
-        gap: 0;
+    gap: 0;
 
-        background: #ffffff;
+    background: #ffffff;
 
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.08);
+  }
 
-    .navigation.is-open {
-        display: flex;
-    }
+  .navigation.is-open {
+    display: flex;
+  }
 
-    .navigation a {
-        padding: 14px 0;
-        text-align: center;
-    }
+  .navigation a {
+    padding: 15px 10px;
 
-    .navigation .book-button {
-        margin-top: 8px;
-    }
+    text-align: center;
+  }
 
-    .menu-button {
-        display: block;
-    }
-
-
-    /* Hero */
-
-    .hero-section {
-        min-height: 760px;
-
-        background-position: center;
-    }
-
-    .hero-content {
-        width: calc(100% - 32px);
-    }
-
-    .hero-content h1 {
-        font-size: clamp(36px, 10vw, 48px);
-    }
-
-    .hero-content p {
-        font-size: 15px;
-    }
-
-    .hero-button {
-        height: 52px;
-        min-width: 170px;
-    }
+  .navigation .nav-cta {
+    margin-top: 8px;
+  }
 
 
-    /* Section heading */
+  /* HERO */
 
-    .section-heading {
-        margin-bottom: 48px;
-    }
+  .hero {
+    min-height: 720px;
 
-    .section-heading h2 {
-        font-size: 30px;
-    }
+    background-position: center;
+  }
 
+  .hero-content {
+    width: calc(100% - 40px);
+  }
 
-    /* Destinations */
+  .hero-content h1 {
+    font-size: 36px;
+    letter-spacing: -0.5px;
+  }
 
-    .destinations-section {
-        padding: 64px 16px;
-    }
+  .hero-content p {
+    margin-top: 20px;
 
-    .destination-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
+    font-size: 15px;
+    line-height: 1.65;
+  }
 
-    .destination-card {
-        width: 100%;
-    }
-
-    .destination-image {
-        height: 220px;
-    }
+  .hero-button {
+    margin-top: 25px;
+  }
 
 
-    /* About */
+  /* DESTINATIONS */
 
-    .about-section {
-        padding: 64px 16px;
-    }
+  .destinations {
+    padding: 65px 20px 75px;
+  }
 
-    .about-card {
-        min-height: 300px;
-        padding: 32px 24px;
-    }
+  .section-heading h2,
+  .about h2 {
+    font-size: 30px;
+  }
 
-    .about-card p {
-        font-size: 16px;
-    }
+  .section-heading p {
+    margin-top: 12px;
+
+    font-size: 14px;
+  }
+
+  .destination-grid {
+    margin-top: 35px;
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .card-image {
+    height: 230px;
+  }
+
+  .card-copy {
+    padding: 22px;
+  }
+
+  .card-copy p {
+    min-height: auto;
+  }
 
 
-    /* Footer */
+  /* ABOUT */
 
-    .site-footer {
-        padding: 48px 16px;
-    }
+  .about {
+    padding: 65px 20px 75px;
+  }
 
-    .footer-container {
-        width: 100%;
-        min-height: auto;
+  .about h2 {
+    margin-bottom: 30px;
+  }
 
-        display: flex;
-        flex-direction: column;
+  .about-card {
+    padding: 30px 24px;
+  }
 
-        gap: 32px;
+  .about-card p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
 
-        text-align: center;
-    }
 
-    .footer-navigation {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
+  /* FOOTER */
 
-    .footer-info {
-        text-align: center;
-    }
+  .site-footer {
+    min-height: auto;
+
+    padding: 45px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 25px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+  }
+
+  .footer-links div {
+    gap: 20px;
+  }
+
+  .copyright {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .tablet-break {
+    display: inline;
+  }
 }
 
 
-/* =========================================================
-   Small Mobile
-   ========================================================= */
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
 
-@media (max-width: 480px) {
+@media (max-width: 420px) {
 
-    .logo {
-        font-size: 21px;
-    }
+  .hero {
+    min-height: 650px;
+  }
 
-    .hero-section {
-        min-height: 680px;
-    }
+  .hero-content h1 {
+    font-size: 31px;
+  }
 
-    .hero-content h1 {
-        font-size: 34px;
-    }
+  .hero-content p {
+    font-size: 14px;
+  }
 
-    .hero-content p {
-        font-size: 14px;
-    }
+  .section-heading h2,
+  .about h2 {
+    font-size: 27px;
+  }
 
-    .section-heading h2 {
-        font-size: 27px;
-    }
-
-    .destination-content {
-        padding: 20px;
-    }
-
-    .destination-content h3 {
-        font-size: 23px;
-    }
-
-    .destination-content p {
-        margin-top: 16px;
-        font-size: 15px;
-    }
-
-    .about-card {
-        padding: 28px 20px;
-    }
+  .card-image {
+    height: 210px;
+  }
 }

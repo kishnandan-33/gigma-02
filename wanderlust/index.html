@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kishnandan</title>
+  <meta name="description" content="Find your next adventure here. Explore pristine beaches, towering mountains, and vibrant cities with our curated travel experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-container">
+
+    <!-- Header — node 2:345 -->
+    <header class="header" id="top">
+      <div class="header__inner">
+        <a href="#top" class="logo">Wanderlust</a>
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="nav">
+          <a href="#top" class="nav__link is-active">Home</a>
+          <a href="#about" class="nav__link">About</a>
+          <a href="#destinations" class="nav__link">Destinations</a>
+          <a href="#destinations" class="btn btn--primary">Book Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Hero — node 2:238 -->
+      <section class="hero">
+        <div class="hero__content">
+          <!-- node 2:245: ExtraBold 40px/48px uppercase, px=27.44px -->
+          <h1 class="hero__title">WELCOME TO<br>DREAM TRAVEL</h1>
+
+          <!-- node 2:248: Regular 18px/28.8px, 4 lines, w=358px -->
+          <p class="hero__text">
+            Find your next adventure here. Explore
+            pristine beaches, towering mountains,
+            and vibrant cities with our curated travel
+            experiences.
+          </p>
+
+          <!-- node 2:249: px=32px py=16px gap=8px pill shadow -->
+          <a href="#destinations" class="btn btn--primary btn--large">
+            <span>Book Now</span>
+            <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3.33334 8H12.6667M12.6667 8L8.00001 3.33334M12.6667 8L8.00001 12.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Destinations — node 2:254: py=96px px=16px gap=64px -->
+      <section class="destinations" id="destinations">
+        <div class="destinations__container">
+
+          <!-- node 2:255: gap=16px between title and sub -->
+          <header class="section__head">
+            <!-- node 2:257: 16px Regular #023e8a -->
+            <h2 class="section__title">Featured Destinations</h2>
+            <!-- node 2:259: 16px Regular #404850, 2 lines -->
+            <p class="section__sub">Discover our most popular travel spots curated<br>just for you.</p>
+          </header>
+
+          <!-- node 2:260: gap=24px 1-col cards -->
+          <div class="cards">
+
+            <!-- Card 1: Maldives — node 2:261 -->
+            <article class="card">
+              <div class="card__media">
+                <img src="images/maldives.jpg" alt="Maldives turquoise waters and overwater villas" loading="lazy">
+                <span class="badge">From $1,299</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Maldives</h3>
+                <!-- node 2:272: 2-line text -->
+                <p class="card__text">Experience ultimate luxury in crystal clear waters and pristine white sand beaches.</p>
+                <a href="#" class="btn--gold">Learn More</a>
+              </div>
+            </article>
+
+            <!-- Card 2: Swiss Alps — node 2:275 -->
+            <article class="card">
+              <div class="card__media">
+                <img src="images/swiss-alps.jpg" alt="Swiss Alps cozy wooden chalet in the snow" loading="lazy">
+                <span class="badge">From $899</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Swiss Alps</h3>
+                <p class="card__text">Hit the slopes or relax in a cozy chalet with breathtaking mountain views.</p>
+                <a href="#" class="btn--gold">Learn More</a>
+              </div>
+            </article>
+
+            <!-- Card 3: Safari Adventure — node 2:289 -->
+            <article class="card">
+              <div class="card__media">
+                <img src="images/safari.jpg" alt="Safari elephants crossing savanna at sunset" loading="lazy">
+                <span class="badge">From $2,499</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Safari Adventure</h3>
+                <p class="card__text">Witness extraordinary wildlife in their natural habitat across vast plains.</p>
+                <a href="#" class="btn--gold">Learn More</a>
+              </div>
+            </article>
+
+            <!-- Card 4: Tokyo City — node 2:303 -->
+            <article class="card">
+              <div class="card__media">
+                <img src="images/tokyo.jpg" alt="Tokyo neon-lit Shibuya crossing at night" loading="lazy">
+                <span class="badge">From $1,599</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Tokyo City</h3>
+                <!-- node 2:314: 3-line text -->
+                <p class="card__text">Immerse yourself in a vibrant metropolis blending deep tradition with modern tech.</p>
+                <a href="#" class="btn--gold">Learn More</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us — node 2:317: #f3f4f5 py=96px px=16px -->
+      <section class="about" id="about">
+        <div class="about__container">
+          <!-- node 2:320: 16px Regular #023e8a centered -->
+          <h2 class="section__title">About Us</h2>
+
+          <!-- node 2:321: p=33px white border #edeeef radius=16px shadow -->
+          <div class="about__card">
+            <div class="about__glow" aria-hidden="true"></div>
+            <!-- node 2:324: 18px/29.25px Regular #404850, centered, word-wrap normal -->
+            <p class="about__text">We are a passionate team of travelers dedicated to helping you find the perfect getaway. From sunny beaches to snowy mountains, we handle all the details so you can enjoy the journey. Our mission is to make exploration effortless, providing curated itineraries and seamless booking experiences that let you focus on making memories.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer — node 2:325: white border-top #edeeef -->
+    <footer class="footer">
+      <div class="footer__inner">
+
+        <!-- node 2:328: 28px Bold #023e8a opacity-80, centered -->
+        <a href="#top" class="logo logo--footer">Wanderlust</a>
+
+        <!--
+          node 2:329: 72px tall nav container
+          Row 1: Privacy Policy | Terms of Service
+          Row 2: Contact Us | FAQ
+        -->
+        <nav class="footer__nav" aria-label="Footer links">
+          <div class="footer__nav-row">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+          <div class="footer__nav-row">
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+          </div>
+        </nav>
+
+        <!--
+          node 2:338: flex-col gap=8px items-end
+          Copyright: left-aligned text (node 2:340), 2-line, pr≈34px
+          Back to Top: right-aligned (node 2:341), SemiBold #005d90 tracking=0.7px + 9.333px icon
+        -->
+        <div class="footer__meta">
+          <p class="footer__copy">© 2024 Wanderlust Travel Agency. All rights reserved.</p>
+          <a href="#top" class="back-top">
+            <span>Back to Top</span>
+            <svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5 8.33334V1.66667M1.66667 5.00001L5 1.66667L8.33333 5.00001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const nav = document.getElementById('nav');
+    if (menuBtn && nav) {
+      menuBtn.addEventListener('click', () => {
+        const open = menuBtn.classList.toggle('is-open');
+        nav.classList.toggle('is-open', open);
+        menuBtn.setAttribute('aria-expanded', String(open));
+      });
+      nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+        menuBtn.classList.remove('is-open');
+        nav.classList.remove('is-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }));
+    }
+  </script>
+</body>
+</html>
